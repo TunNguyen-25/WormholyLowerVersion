@@ -15,6 +15,7 @@
 #import <Wormholy/Wormholy-Swift.h>
 #endif
 
+#if DEBUG
 typedef NSURLSessionConfiguration*(*SessionConfigConstructor)(id,SEL);
 static SessionConfigConstructor orig_defaultSessionConfiguration;
 static SessionConfigConstructor orig_ephemeralSessionConfiguration;
@@ -47,3 +48,4 @@ __attribute__((constructor)) static void sessionConfigurationInjectEntry(void) {
                                                                                          [NSURLSessionConfiguration class],
                                                                                          YES);
 }
+#endif

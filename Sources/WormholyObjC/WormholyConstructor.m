@@ -1,5 +1,6 @@
 #import <UIKit/UIKit.h>
 
+#if DEBUG
 /// Library constructor to observe `UIApplicationDidFinishLaunchingNotification` immediately on app launch.
 /// Calls `applicationDidFinishLaunching` on Wormholy class to initialize Wormholy.
 /// This is an alternative to a +initialize in Objective-C.
@@ -17,3 +18,4 @@ static void __attribute__ ((constructor)) wormholy_constructor(void) {
                    name:UIApplicationDidFinishLaunchingNotification
                  object:nil];
 }
+#endif

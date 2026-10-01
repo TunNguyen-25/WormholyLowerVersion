@@ -67,6 +67,10 @@ NotificationCenter.default.post(name: NSNotification.Name(rawValue: "wormholy_fi
 
 By following these steps and configurations, you can effectively integrate Wormholy into your development workflow, enhancing your ability to debug network requests efficiently.
 
+## Changelog
+
+- 2.0.3 – auto-start (swizzle + URLProtocol registration) chỉ chạy khi DEBUG; Release không bị can thiệp.
+
 ## Contributing
 
 - If you **need help** or you'd like to **ask a general question**, open an issue.
